@@ -1,11 +1,11 @@
 {
   "name": "autosocial-studio",
   "version": "0.1.0",
-  "description": "Local multi-account social media automation dashboard for TikTok, Instagram, and YouTube",
+  "description": "MVX Social — local multi-account social publishing and automation surface for MVX Ads Master, based on AutoSocial Studio",
   "private": true,
   "main": "src/cli.js",
   "scripts": {
-    "start": "node src/dashboard-server.js",
+    "start": "node --require ./src/mvx-branding-hook.js src/dashboard-server.js",
     "clean:debug": "node scripts/clean-runtime.js",
     "check": "npm run check:syntax && npm test",
     "check:syntax": "node scripts/check-syntax.js",
@@ -14,7 +14,7 @@
     "login": "node src/cli.js login",
     "post": "node src/cli.js post",
     "daemon": "node src/cli.js daemon",
-    "dashboard": "node src/dashboard-server.js",
+    "dashboard": "node --require ./src/mvx-branding-hook.js src/dashboard-server.js",
     "uniquify": "node src/cli.js uniquify",
     "video-info": "node src/cli.js video-info",
     "autodownload": "node autodownload/watcher.js"
@@ -25,23 +25,22 @@
     "creator-tools",
     "marketing",
     "social-media",
-    "indie-hackers",
-    "ai-builders",
+    "mvx-ads-master",
     "playwright",
     "tiktok",
     "instagram",
     "youtube"
   ],
-  "author": "AutoSocial Studio contributors",
+  "author": "AutoSocial Studio contributors; MVX Ads Master integration",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Katzca/AutoSocial.git"
+    "url": "git+https://github.com/lucadeg/AutoSocial.git"
   },
   "bugs": {
-    "url": "https://github.com/Katzca/AutoSocial/issues"
+    "url": "https://github.com/lucadeg/AutoSocial/issues"
   },
-  "homepage": "https://github.com/Katzca/AutoSocial#readme",
+  "homepage": "https://github.com/lucadeg/AutoSocial#readme",
   "engines": {
     "node": ">=18"
   },
